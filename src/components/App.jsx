@@ -13,7 +13,7 @@ const contactsList = [
 ];
 
 export const App = () => {
-  
+
   const [contacts, setContacts] = useState(
     () => JSON.parse(window.localStorage.getItem('contacts')) ?? contactsList
   );
@@ -55,7 +55,6 @@ export const App = () => {
   };
 
   useEffect(() => {
-    console.log('useEffect');
     window.localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
